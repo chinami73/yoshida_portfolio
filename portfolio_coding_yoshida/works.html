@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="header">
+        <header>
+            <div class="header_wrap">
+                <h1 class="logo">
+                    <img src="images/asset6.png" alt="ロゴ">
+                </h1>
+                <nav>
+                    <ul class="headers">
+                        <li><a href="index.html#TOP">TOP</a></li>
+                        <li><a href="index.html#ABOUT ME">ABOUT ME</a></li>
+                        <li><a href="index.html#SKILL">SKILL</a></li>
+                        <li><a href="works.html">WORKS</a></li>
+                        <li><a href="index.html#CONTACT">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+    </section>
+
+
+
+
+    <section class="WORKS">
+        <h2>WORKS</h2>
+
+        <div class="banner">
+            <p>banner</p>
+            <div class="banner-wrap">
+                <div class="banner1">
+                    <img src="images/asset12.png" alt="POPハンバーガーバナー">
+                    <p>ハンバーガーバナー<br>
+                        担当：デザイン<br>
+                        制作期間:1週間<br>
+                        こだわり:男子高校生をターゲットに作成しました。ガツンとしたイメージを与えたかったのでポップなフォントを使用しています。</p>
+                </div>
+
+                <div class="banner2">
+                    <img src="images/asset14.png" alt="高級感ハンバーガーバナー">
+                    <p>ハンバーガーバナー<br>
+                        担当：デザイン<br>
+                        制作期間:1週間<br>
+                        こだわり:40~50代をターゲットに高級感のある大人な印象にしましった。高級感を出すためにフォントは明朝体を使用し、余白を多く設けました。</p>
+                </div>
+
+                <div class="banner3">
+                    <img src="images/asset15.png" alt="旅行バナー">
+                    <p>旅行バナー<br>
+                        担当：デザイン<br>
+                        制作期間:1週間<br>
+                        こだわり:30~40代独身の方をターゲットに大人の旅行をイメージして作成しました。</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="LP">
+            <p>LP/HP</p>
+            <div class="LP-wrap">
+                <div class="LP1">
+                    <img src="images/asset12.png" alt="POPハンバーガーバナー">
+                    <p>ハンバーガーバナー<br>
+                        担当：デザイン<br>
+                        制作期間:1週間<br>
+                        こだわり:男子高校生をターゲットに作成しました。ガツンとしたイメージを与えたかったのでポップなフォントを使用しています。</p>
+                </div>
+
+                <div class="LP2">
+                    <img src="images/asset14.png" alt="高級感ハンバーガーバナー">
+                    <p>ハンバーガーバナー<br>
+                        担当：デザイン<br>
+                        制作期間:1週間<br>
+                        こだわり:40~50代をターゲットに高級感のある大人な印象にしましった。高級感を出すためにフォントは明朝体を使用し、余白を多く設けました。</p>
+                </div>
+
+                <div class="LP3">
+                    <img src="images/asset15.png" alt="旅行バナー">
+                    <p>旅行バナー<br>
+                        担当：デザイン<br>
+                        制作期間:1週間<br>
+                        こだわり:30~40代独身の方をターゲットに大人の旅行をイメージして作成しました。</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- モーダル    -->
+        <div class="modal__wrapper">
+            <div class="modal__layer"></div>
+            <div class="modal__container">
+
+                <!-- モーダルを閉じるボタン -->
+                <div class="modal__close"></div>
+                <!-- / モーダルを閉じるボタン -->
+
+                <!-- モーダル内のコンテンツ -->
+                <div class="modal__content"></div>
+                <!-- / モーダル内のコンテンツ -->
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </section>
+
+    <div class="WORKS-button-wrap">
+        <input type="button" onclick="window.open('index.html')" value="TOPへ戻る">
+
+    </div>
+
+
+
+    <div class="footer-wrap-works">
+        <img src="images/asset6.png" alt="ロゴ">
+        <p class="end-text-warks">© SUN FLOWER All rights reserved.</p>
+    </div>
+
+    <!-- モーダルウィンドウ -->
+    <script>
+        // 変数に要素を入れる
+        var trigger = $('.modal__trigger'),
+            wrapper = $('.modal__wrapper'),
+            layer = $('.modal__layer'),
+            container = $('.modal__container'),
+            close = $('.modal__close'),
+            content = $('.modal__content');
+
+        // 『モーダルを開くボタン』をクリックしたら、『モーダル本体』を表示
+        $(trigger).click(function () {
+            $(wrapper).fadeIn(400);
+
+            // クリックした画像のHTML要素を取得して、置き換える
+            $(content).html($(this).prop('outerHTML'));
+
+            // スクロール位置を戻す
+            $(container).scrollTop(0);
+
+            // サイトのスクロールを禁止にする
+            $('html, body').css('overflow', 'hidden');
+        });
+
+        // 『背景』と『モーダルを閉じるボタン』をクリックしたら、『モーダル本体』を非表示
+        $(layer).add(close).click(function () {
+            $(wrapper).fadeOut(400);
+
+            // サイトのスクロール禁止を解除する
+            $('html, body').removeAttr('style');
+        });
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
